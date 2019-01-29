@@ -6,10 +6,99 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+
+    <div id="root" class="pantalla">
+      <h1>Safe-Word</h1>
+      <button class="boton" onclick="screenGenerarPassword()">Generar Password</button>
+      <br>
+      <br>
+      <button class="boton" onclick="screenCambiarPasswordActual()">Cambiar Password Actual</button>
     </div>
+
+    <div id="screenGenerarPassword" class="pantalla">
+      <br>
+      <h2>Palabra de Seguridad</h2>
+      <br>
+      <div>
+        <input autofocus type="text" id="safeWord" class="safeWord" placeholder="Escribe aquí">
+      </div>
+      <h2>Nivel de Seguridad</h2>
+      <div>
+          <select id="offset">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          </select>
+        </div>   
+      <br>
+      <br>    
+        <div><button class="boton" onclick="PasswordNuevo()">Generar</button></div>
+    </div>
+
+    <div id="screenCambiarPasswordActual" class="pantalla">
+      <br>
+      <h2>Password Actual</h2> 
+      <br>  
+      <div>
+        <input autofocus type="text" id="safeWord" class="safeWord" placeholder="Escribe aquí">
+      </div>
+      <h2>Nivel de Seguridad Actual</h2>  
+      
+      <div>
+        <select id="offset">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        </select>  
+        </div>    
+      <br>
+      <br>    
+        <div><button class="boton" onclick="generarPasswordNuevo()">Siguiente</button></div>
+    </div>
+
+    <div id="screenChangePassword" class="pantalla">
+      <br>
+        <div>
+          <h2>Password Descifrado <span id="safeWord"> </span> </h2>
+          <br>
+        </div>
+        
+        <div>
+          <h2>Nuevo Nivel de Seguridad</h2>
+          <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          </select>  
+        </div>    
+      <br>
+      <br>    
+        <div><button class="boton" onclick="changePassword()">Cambiar</button></div>
+    </div>
+
+    <div id="yourPassword" class="pantalla">
+        <br>
+          <div>
+            <h2>Este es tu Password <span id="safeWord"> </span> </h2>
+            <br>
+            <div><button class="boton" onclick="star()">Inicio</button></div>
+      </div>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+
+
   </body>
 </html>
