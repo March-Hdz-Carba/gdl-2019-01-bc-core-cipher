@@ -2,7 +2,7 @@
 const cipherWord = () => {
     const str = document.getElementById("safeWord").value;//Trae el valor a cifrar
     const offset = parseInt(document.getElementById("offset").value);//Trae el valor de offset cifar
-    let cipherOne = window.cipher.encode(str,offset);
+    let cipherOne = window.cipher.encode(offset,str);
     document.getElementById("yourSafeWord").innerHTML = cipherOne;
     return cipherOne;
  };
@@ -12,7 +12,7 @@ document.getElementById("passwordNuevo").addEventListener("click",cipherWord);//
 const decipherWord = () => {
     const str = document.getElementById("safeWordecode").value;//Trae el valor a cifrar
     const offset = parseInt(document.getElementById("offsetTwo").value);//Trae el valor de offset cifar
-    let decipherOne = window.cipher.decode(str,offset);
+    let decipherOne = window.cipher.decode(offset,str);
     document.getElementById("decifradoSafeWord").innerHTML = decipherOne;
     return decipherOne;
  };
@@ -20,11 +20,11 @@ document.getElementById("generaPasswordNuevo").addEventListener("click",decipher
 
 //Funcion para volver a cifrar con el nuevo offset dado por usuario
 const cipherWordNew = () => {
-    const str = decipherWord;
-    console.log(str()); //document.getElementById("decifradoSafeWord").value;//Trae el valor a cifrar
+    const str = decipherWord();
+    //console.log(str()); //document.getElementById("decifradoSafeWord").value;//Trae el valor a cifrar
     const offset = parseInt(document.getElementById("nuevoOffset").value);//Trae el valor de offset cifar
-    let cipherTwo = window.cipher.encode(str,offset);
-    document.getElementById("yourNewPassword").innerHTML = cipherTwo;
+    let cipherTwo = window.cipher.encode(offset,str);
+    document.getElementById("yourSafeWord").innerHTML = cipherTwo;
     console.log(cipherTwo);
     return cipherTwo; 
  };
