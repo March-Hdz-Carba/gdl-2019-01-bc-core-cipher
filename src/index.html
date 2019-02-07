@@ -11,22 +11,21 @@
       <h1>Safe-Word</h1>
       <br>
       <br>
-      <p>Bienvenidos a Safe-Word, esta aplicacion te ayudara a crear contraseñas seguras que podras
-        utilizar en cualquier sitio que desees. Solo tienes que proporcionar una "palabra clave" que te sea
-        practica de recordar y que puedes cifrar de diferente formas con tan solo elegir un nivel de seguridad 
-        distinto.
+      <p>Bienvenidos a Safe-Word, esta aplicación te ayudara a crear contraseñas seguras que podrás 
+        utilizar en cualquier sitio que desees. Solo tienes que proporcionar una palabra (“palabra clave”) 
+        que te sea fácil y practica de recordar, y que puedes cifrar de diferentes formas con tan solo 
+        elegir un nivel de seguridad distinto.
       </p>
       <br>
       <br>
-      <p>Si quieres empezar a utilizar Safe-Word y crear tus propias contraseñar ta click en el siguiente boton.</p>
+      <p>Si quieres empezar a utilizar Safe-Word y crear tus propias contraseñas seguras, 
+         da click en el siguiente botón.</p>
       <button class="boton" id="GenerarPassword">Generar Password</button>
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <p>Si tu ya cuentas con una "palabra clave" que deseas descifrar para volver a cifrar con un nivel
-        diferente de seguridad, da click en el sigueinte boton.
+      <p>Si tú ya has utilizado Safe-Word y deseas cambiar el cifrado de tu “palabra clave” actual, 
+         da click en el siguiente botón.
       </p>
       <button class="boton" id="CambiarPasswordActual">Cambiar Password Actual</button>
     </div>
@@ -34,13 +33,21 @@
     <div id="pantallaGenerarPassword" class="pantalla">
       <br>
       <h2>Palabra de Seguridad</h2>
+      <p>Escribe en el siguiente espacio aquella palabra que te sea fácil de recordar y que quieras 
+         cifrar para empezar a utilizarla como password seguro. 
+         (Solo mayúsculas, sin caracteres especiales).</p>
       <br>
       <div>
-        <input autofocus type="text" id="safeWord" placeholder="Escribe aquí">
+        <input autofocus type="text" id="safeWord" class="word" placeholder="Escribe aquí">
       </div>
+      <br>
+      <br>
+      <br>
       <h2>Nivel de Seguridad</h2>
+      <p>Elige el nivel de seguridad que desees para tu password.</p>
+      <br>
       <div>
-          <select id="offset">
+          <select id="offset" class="value">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -58,14 +65,19 @@
     <div id="pantallaPasswordActual" class="pantalla">
       <br>
       <h2>Password Actual</h2> 
-      <br>  
+      <br>
+      <p>Escribe tu password actual.</p>  
       <div>
-        <input autofocus type="text" id="safeWordecode" placeholder="Escribe aquí">
+        <input autofocus type="text" id="safeWordecode" class="word" placeholder="Escribe aquí">
       </div>
+      <br>
+      <br>
       <h2>Nivel de Seguridad Actual</h2>  
-      
+      <br>
+      <p>Elige el nivel actual de seguridad que tiene tu password.</p>
+      <br>
       <div>
-        <select id="offsetTwo">
+        <select id="offsetTwo" class="value">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -83,13 +95,14 @@
     <div id="pantallaPasswordActualDescifrado" class="pantalla">
       <br>
         <div>
-          <h2>Password Descifrado <span id="decifradoSafeWord"> </span> </h2>
-          <br>
+          <h2>Password Descifrado</h2>
+          <h4><span id="decifradoSafeWord"> </span></h4>
         </div>
-        
+        <br>
         <div>
           <h2>Nuevo Nivel de Seguridad</h2>
-          <select id="nuevoOffset">
+          <p>Elige el nuevo nivel de seguridad que desees para tu password.</p>
+          <select id="nuevoOffset" class="value">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -111,6 +124,7 @@
             <h3><span id="yourSafeWord"> </span></h3>
           </div>
             <br>
+            <p>Si quieres volver a intentarlo da click al siguiente botón.</p>
           <div><button class="boton" id="star">Inicio</button></div>
     </div>
 

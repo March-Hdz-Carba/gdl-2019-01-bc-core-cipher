@@ -1,20 +1,17 @@
-.pantalla{
-    display:none;
-    position:absolute;
-    top: 20%;
-    background-color: #2b4277;
-    padding: 20%;
-  }
-
   body {
     font-family: "sans serif";
     text-align: center;
-    background: #2b4277;
+    background-image: url(password.jpg);
+    background-size: cover;
     line-height: 25px;
+  }
+  
+  .pantalla{
+    display:flex;
+    padding: 10%;
   }
 
   .boton{
-    border: none;
     border-radius: 10px;
     background-color: #797A71;
     color: white;
@@ -23,18 +20,48 @@
     display: inline-block;
     border-bottom-color: black;
     border-width: 2px;
+    font-size: 18px;
+
   }
 
-  h1 {
-   font-size: 80px; 
-   width: 50%;
+  .word{
+    font-size: 20px;
+  }
+
+  .value{
+    font-size: 20px;
+  }
+
+  #decifradoSafeWord{
+    font-size: 35px;
+    color: white;
+  }
+
+  #yourSafeWord{
+    font-size: 35px;
+    color: yellow;
+  }
+
+  h1{
+   font-size: 110px; 
    margin: auto;
-   padding: 8px 16 px;
-   color: #EAEF41; 
+   color: #DDF902; 
    text-align: center;
+  }
+
+  h2{
+   font-size: 40px; 
+   margin: auto;
+   text-align: center;
+   font-family: Cambria;
+   color: #F00C09;
+   text-shadow: 1px 2px black;
   }
 
   p {
     color: white;
-    font-family: Arial;
+    font-family: Calibri;
+    font-weight: 500;
+    font-size: 25px;
+    text-shadow: 1px 2px black;
   }
