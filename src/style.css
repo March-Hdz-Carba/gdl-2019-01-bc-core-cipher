@@ -1,36 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
+  
   body {
-    font-family: "sans serif";
     text-align: center;
-    background-image: url(password.jpg);
+    background-image: url(./imagenes/cipherBack.png);
     background-size: cover;
-    line-height: 25px;
+    line-height: 1.5625rem;
+  }
+
+  .tittle{
+    margin-top: 5%;
+    font-family: 'Viga', sans-serif;
+    color: #DDF902; 
+    text-align: center;
+  }
+
+  h1{
+    font-size: 6.875rem;
+  }
+
+  p{
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.5625rem;
   }
   
   .pantalla{
     display:flex;
-    padding: 10%;
+    padding: 5%;
+    padding-top: 2%;
   }
 
-  .boton{
+  .buttonScreenOne{
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+  }
+
+  .word{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .offset{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  /* .boton{
     border-radius: 10px;
     background-color: #797A71;
-    color: white;
+    color: rgb(250, 243, 243);
     padding: 8px 16px;
     left: 40%;
     display: inline-block;
     border-bottom-color: black;
     border-width: 2px;
     font-size: 18px;
-
-  }
-
-  .word{
-    font-size: 20px;
-  }
-
-  .value{
-    font-size: 20px;
-  }
+  } */
 
   #decifradoSafeWord{
     font-size: 35px;
@@ -42,26 +68,11 @@
     color: yellow;
   }
 
-  h1{
-   font-size: 110px; 
-   margin: auto;
-   color: #DDF902; 
-   text-align: center;
-  }
 
   h2{
-   font-size: 40px; 
+   font-size: 2.5rem; 
    margin: auto;
    text-align: center;
-   font-family: Cambria;
-   color: #F00C09;
-   text-shadow: 1px 2px black;
-  }
-
-  p {
-    color: white;
-    font-family: Calibri;
-    font-weight: 500;
-    font-size: 25px;
-    text-shadow: 1px 2px black;
+   font-family: 'Monserrat', sans-serif;
+   color: #4AA0C2;
   }

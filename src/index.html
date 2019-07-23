@@ -2,135 +2,167 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
-    <div id="root" class="pantalla">
-      <h1>Safe-Word</h1>
-      <br>
-      <br>
-      <p>Bienvenidos a Safe-Word, esta aplicación te ayudara a crear contraseñas seguras que podrás 
-        utilizar en cualquier sitio que desees. Solo tienes que proporcionar una palabra (“palabra clave”) 
-        que te sea fácil y practica de recordar, y que puedes cifrar de diferentes formas con tan solo 
-        elegir un nivel de seguridad distinto.
-      </p>
-      <br>
-      <br>
-      <p>Si quieres empezar a utilizar Safe-Word y crear tus propias contraseñas seguras, 
-         da click en el siguiente botón.</p>
-      <button class="boton" id="GenerarPassword">Generar Password</button>
-      <br>
-      <br>
-      <br>
-      <p>Si tú ya has utilizado Safe-Word y deseas cambiar el cifrado de tu “palabra clave” actual, 
-         da click en el siguiente botón.
-      </p>
-      <button class="boton" id="CambiarPasswordActual">Cambiar Password Actual</button>
-    </div>
+    <header>
+      <div class="tittle">
+          <h1>Safe-Word</h1>
+      </div>
+    </header>
 
-    <div id="pantallaGenerarPassword" class="pantalla">
-      <br>
-      <h2>Palabra de Seguridad</h2>
+    <section id="root" class="pantalla">
+      <div>
+          <p>Bienvenidos a Safe-Word, esta aplicación te ayudara a crear contraseñas seguras que podrás 
+              utilizar en cualquier sitio que desees. Solo tienes que proporcionar una palabra (“palabra clave”) 
+              que te sea fácil y practica de recordar, y que puedes cifrar de diferentes formas con tan solo 
+              elegir un nivel de seguridad distinto.
+          </p>
+      </div>
+      <div>
+          <p>Si quieres empezar a utilizar Safe-Word y crear tus propias contraseñas seguras, 
+              da click en el siguiente botón.
+          </p>
+        </div>
+      <button class="btn btn-outline-primary buttonScreenOne" id="GenerarPassword">
+        Generar Password
+      </button>
+      <div>
+          <p>Si tú ya has utilizado Safe-Word y deseas cambiar el cifrado de tu “palabra clave” actual, 
+              da click en el siguiente botón.
+          </p>
+      </div>
+      <button class="btn btn-outline-primary buttonScreenOne" id="CambiarPasswordActual">
+        Cambiar Password Actual
+      </button>
+    </section>
+
+    <section id="pantallaGenerarPassword" class="pantalla">
+      <h2>
+        Palabra de Seguridad
+      </h2>
       <p>Escribe en el siguiente espacio aquella palabra que te sea fácil de recordar y que quieras 
          cifrar para empezar a utilizarla como password seguro. 
-         (Solo mayúsculas, sin caracteres especiales).</p>
-      <br>
-      <div>
-        <input autofocus type="text" id="safeWord" class="word" placeholder="Escribe aquí">
-      </div>
-      <br>
-      <br>
-      <br>
-      <h2>Nivel de Seguridad</h2>
-      <p>Elige el nivel de seguridad que desees para tu password.</p>
-      <br>
-      <div>
-          <select id="offset" class="value">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          </select>
-        </div>   
-      <br>
-      <br>    
-        <div><button class="boton" id="passwordNuevo">Generar</button></div>
-    </div>
-
-    <div id="pantallaPasswordActual" class="pantalla">
-      <br>
-      <h2>Password Actual</h2> 
-      <br>
-      <p>Escribe tu password actual.</p>  
-      <div>
-        <input autofocus type="text" id="safeWordecode" class="word" placeholder="Escribe aquí">
-      </div>
-      <br>
-      <br>
-      <h2>Nivel de Seguridad Actual</h2>  
-      <br>
-      <p>Elige el nivel actual de seguridad que tiene tu password.</p>
-      <br>
-      <div>
-        <select id="offsetTwo" class="value">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        </select>  
-        </div>    
-      <br>
-      <br>    
-        <div><button class="boton" id="generaPasswordNuevo">Siguiente</button></div>
-    </div>
-
-    <div id="pantallaPasswordActualDescifrado" class="pantalla">
-      <br>
-        <div>
-          <h2>Password Descifrado</h2>
-          <h4><span id="decifradoSafeWord"> </span></h4>
+         (Solo mayúsculas, sin caracteres especiales).
+      </p>
+      <div class="form-row align-items-center word">
+        <div class="col-auto">
+          <input type="text" id="safeWord" class="form-control mb-2" id="inlineFormInput" placeholder="Escribe aquí">
         </div>
-        <br>
-        <div>
-          <h2>Nuevo Nivel de Seguridad</h2>
-          <p>Elige el nuevo nivel de seguridad que desees para tu password.</p>
-          <select id="nuevoOffset" class="value">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          </select>  
-        </div>    
-      <br>
-      <br>    
-        <div><button class="boton" id="changePassword">Cambiar</button></div>
-    </div>
+      </div>
+      <h2>
+        Nivel de Seguridad
+      </h2>
+      <p>
+        Elige el nivel de seguridad que desees para tu password.
+      </p>
+      <div class="form-row align-items-center offset">
+        <div class="col-auto my-1">
+            <select id="offset" class="custom-select mr-sm-2 value">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+        </div> 
+      </div>     
+      <button class="btn btn-outline-primary" id="passwordNuevo">
+        Generar
+      </button>
+    </section>
 
-    <div id="yourPassword" class="pantalla">
-        <br>
-          <div>
-            <h2>Este es tu Password  </h2>
-            <h3><span id="yourSafeWord"> </span></h3>
-          </div>
-            <br>
-            <p>Si quieres volver a intentarlo da click al siguiente botón.</p>
-          <div><button class="boton" id="star">Inicio</button></div>
-    </div>
+    <section id="pantallaPasswordActual" class="pantalla">
+      <h2>Password Actual</h2> 
+      <p>
+        Escribe tu password actual.
+      </p>  
+      <div class="form-row align-items-center word">
+        <div class="col-auto">
+          <input type="text" class="form-control mb-2" id="safeWordecode" placeholder="Escribe aquí">
+        </div>
+      </div>
+      <h2>
+        Nivel de Seguridad Actual
+      </h2>  
+      <p>
+        Elige el nivel actual de seguridad que tiene tu password.
+      </p>
+      <div class="form-row align-items-center offset">
+        <div class="col-auto my-1">
+          <select id="offsetTwo" class="custom-select mr-sm-2 value">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </div>
+      </div>  
+      <button class="btn btn-outline-primary" id="generaPasswordNuevo">
+        Siguiente
+      </button>
+    </section>
 
+    <section id="pantallaPasswordActualDescifrado" class="pantalla">
+      <h2>
+        Password Descifrado
+      </h2>
+      <h4>
+        <span id="decifradoSafeWord"></span>
+      </h4>
+      <h2>
+        Nuevo Nivel de Seguridad
+      </h2>
+      <p>
+        Elige el nuevo nivel de seguridad que desees para tu password.
+      </p>
+      <div class="form-row align-items-center offset">
+        <div class="col-auto my-1">
+          <select id="nuevoOffset" class="custom-select mr-sm-2 value">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </div>
+      </div>        
+      <button class="btn btn-outline-primary" id="changePassword">
+        Cambiar
+      </button>
+    </section>
+
+    <section id="yourPassword" class="pantalla">
+      <h2>
+        Este es tu Password  
+      </h2>
+      <h3>
+        <span id="yourSafeWord"> </span>
+      </h3>
+      <p>
+        Si quieres volver a intentarlo da click al siguiente botón.
+      </p>
+      <button class="btn btn-outline-primary" id="star">
+        Inicio
+      </button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-
-
   </body>
 </html>
